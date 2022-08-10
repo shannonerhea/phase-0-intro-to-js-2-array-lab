@@ -9,10 +9,9 @@ function destructivelyPrependCat(name) {
 function destructivelyRemoveLastCat() {
     cats.pop();
 };
-function destructivelyRemoveFirstCat() {
-    cats.shift();
-};
-function appendCat(name) {
+const destructivelyRemoveFirstCat = () => { cats.shift()};
+
+const appendCat = (name) => {
     const newCatsArr = [...cats, name];
     return newCatsArr;
 };
@@ -20,9 +19,9 @@ function prependCat(name) {
     return prependCat = [name, ...cats];
    
 };
-function removeLastCat() {
+const removeLastCat = () => {
     return cats.slice(0, -1);
 };
-function removeFirstCat() {
+const removeFirstCat = () => {
     return cats.slice(1);
 };
